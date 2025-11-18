@@ -34,7 +34,7 @@ function App() {
       </div>
 
       <footer className="monitor-footer">
-        <p>A Project by: [Your Name/Team Name]</p>
+        <p>A Project by: [Aditya Sharma]</p>
         <p>Tech Stack: React, Vite, TypeScript, CSS</p>
       </footer>
     </div>
