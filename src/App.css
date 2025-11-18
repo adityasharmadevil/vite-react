@@ -1,3 +1,10 @@
+/* src/App.css */
+:root {
+  font-family: monospace, sans-serif; /* Use a geeky font */
+  background-color: #1a1a1a;
+  color: #00ff00; /* Classic green terminal text */
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,38 +12,69 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.monitor-container {
+  border: 2px solid #00ff00;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.monitor-header h1 {
+  font-size: 2.5em;
+  color: #00ff00;
+  text-shadow: 0 0 5px #00ff00;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.subtitle {
+  color: #aaa;
 }
 
 .card {
   padding: 2em;
+  border: 1px solid #00ff00;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  margin-top: 20px;
+}
+
+.terminal-output {
+  text-align: left;
+  height: 150px;
+  overflow-y: auto;
+  font-size: 0.9em;
+}
+
+.log-entry {
+  margin: 0;
+  padding: 2px 0;
+  white-space: nowrap;
+}
+
+.action-btn {
+  background-color: #00ff00;
+  color: #1a1a1a;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.action-btn:hover {
+  background-color: #00dd00;
 }
 
 .read-the-docs {
   color: #888;
+  margin-top: 10px;
+}
+
+.monitor-footer {
+  margin-top: 20px;
+  font-size: 0.8em;
+  color: #555;
+}
+
+/* Remove default styles for unused assets if they were in the original HTML */
+.logo, .logo.react, @keyframes logo-spin, @media (prefers-reduced-motion: no-preference) {
+  display: none;
 }

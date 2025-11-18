@@ -1,35 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [status, setStatus] = useState('Monitoring Active...');
+
+  const runScan = () => {
+    setStatus('Scanning policy files...');
+    // Simulate a scan process
+    setTimeout(() => {
+      setStatus('Scan Complete: 0 threats detected.');
+    }, 2000);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="monitor-container">
+      <header className="monitor-header">
+        <h1>{'{ PolicyShield-Monitor }'}</h1>
+        <p className="subtitle">Project Status Dashboard v1.0</p>
+      </header>
+
+      <div className="card terminal-output">
+        <p className="log-entry">[SYSTEM] Initializing PolicyShield subsystem...</p>
+        <p className="log-entry">[INFO] Data integrity check passed.</p>
+        <p className="log-entry">[STATUS] {status}</p>
       </div>
-      <h1>Vite + React</h1>
+
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button onClick={runScan} className="action-btn">
+          Run Policy Scan
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+        <p className="read-the-docs">
+          Monitoring enterprise policy compliance in real-time.
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+      <footer className="monitor-footer">
+        <p>A Project by: [Your Name/Team Name]</p>
+        <p>Tech Stack: React, Vite, TypeScript, CSS</p>
+      </footer>
+    </div>
+  );
 }
 
-export default App
+export default App;
