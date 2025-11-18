@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
@@ -6,7 +6,6 @@ function App() {
 
   const runScan = () => {
     setStatus('Scanning policy files...');
-    // Simulate a scan process
     setTimeout(() => {
       setStatus('Scan Complete: 0 threats detected.');
     }, 2000);
