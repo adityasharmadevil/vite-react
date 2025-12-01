@@ -1,60 +1,46 @@
-import { useState } from "react";
+import React from "react";
 import "./App.css";
 
-function App() {
-  const [status, setStatus] = useState("System Stable | Portfolio Loaded");
-
-  const runScan = () => {
-    setStatus("Running system diagnostics...");
-    setTimeout(() => {
-      setStatus("Diagnostics Complete: No issues detected.");
-    }, 2000);
-  };
-
+const App: React.FC = () => {
   return (
-    <div className="monitor-container">
+    <div className="container">
 
       {/* HEADER */}
-      <header className="monitor-header">
-        <h1 className="main-title">{`{ Aditya Sharma | Portfolio }`}</h1>
-        <p className="subtitle">Backend Developer • Cybersecurity • Java • Spring Boot • MongoDB</p>
+      <header className="header">
+        <h1 className="title">Aditya Sharma</h1>
+        <p className="subtitle">
+          Backend Developer • Cybersecurity • Java • Spring Boot • MongoDB
+        </p>
       </header>
 
-      {/* HERO / INTRO */}
-      <div className="card terminal-card">
-        <p className="log green">[BOOT] Initializing Profile...</p>
-        <p className="log blue">[INFO] Loading resume data...</p>
-        <p className="log yellow">[STATUS] {status}</p>
-
-        <div className="intro">
-          <h2>Hello, I'm <span className="highlight">Aditya Sharma</span> 👋</h2>
-          <p className="intro-text">
-            Motivated backend developer with strong fundamentals in 
-            <strong> Java, networking, and cybersecurity</strong>. Experienced in building
-            <strong> Spring Boot REST APIs, WebSocket communication, JWT authentication,</strong> and
-            cloud-backed databases using <strong>MongoDB Atlas</strong>.
-          </p>
-        </div>
-      </div>
-
-      {/* ABOUT ME */}
-      <div className="card">
-        <h2 className="section-title">{`> About_Me`}</h2>
-        <p className="section-text">
-          I specialize in backend development and secure system design. I enjoy building 
-          real-time, scalable applications using modern technologies such as Java, Spring Boot,
-          WebSocket signaling, STUN/TURN servers, and MongoDB Atlas. I have hands-on experience 
-          in cybersecurity tools and frameworks, and I am passionate about solving 
-          real-world engineering problems.
+      {/* INTRO SECTION */}
+      <section className="card">
+        <h2 className="section-heading">Introduction</h2>
+        <p className="text">
+          Hello, I'm <strong>Aditya Sharma</strong>. I am a backend developer with strong
+          fundamentals in Java, networking, and cybersecurity. I specialize in building
+          secure and scalable applications using Spring Boot, REST APIs, JWT authentication,
+          WebSockets, and MongoDB Atlas.
         </p>
-      </div>
+      </section>
+
+      {/* ABOUT */}
+      <section className="card">
+        <h2 className="section-heading">About Me</h2>
+        <p className="text">
+          I focus on backend engineering, cybersecurity, and real-time communication systems.
+          I enjoy solving complex technical problems and building modern systems using
+          clean, maintainable code.
+        </p>
+      </section>
 
       {/* SKILLS */}
-      <div className="card">
-        <h2 className="section-title">{`> Skills`}</h2>
+      <section className="card">
+        <h2 className="section-heading">Skills</h2>
+
         <div className="skills-grid">
           {[
-            "Java", "Spring Boot", "RESTful APIs", "WebSocket", "JWT Authentication",
+            "Java", "Spring Boot", "REST APIs", "WebSocket", "JWT Authentication",
             "MongoDB Atlas", "SQL", "HTML/CSS",
             "Penetration Testing", "Cybersecurity Frameworks",
             "Postman", "Git", "IntelliJ IDEA", "JUnit",
@@ -63,88 +49,78 @@ function App() {
             <span key={index} className="skill-chip">{skill}</span>
           ))}
         </div>
-      </div>
+      </section>
 
       {/* PROJECTS */}
-      <div className="card">
-        <h2 className="section-title">{`> Projects`}</h2>
+      <section className="card">
+        <h2 className="section-heading">Projects</h2>
 
         <div className="project-card">
-          <h3>Connexus – Secure VoIP Calling App (Backend Developer)</h3>
-          <p>
-            Built backend for peer-to-peer calling using Spring Boot.
-            Implemented JWT authentication, REST APIs, and WebSocket signaling.
-            Integrated MongoDB Atlas and enabled real-time audio calls with STUN/TURN servers.
+          <h3 className="project-title">Connexus – Secure VoIP Calling App</h3>
+          <p className="text">
+            Developed backend with Spring Boot, JWT authentication, REST APIs, WebSocket signaling,
+            and MongoDB Atlas. Implemented secure real-time communication using STUN/TURN servers.
           </p>
         </div>
 
         <div className="project-card">
-          <h3>JavaFX Web Scraper</h3>
-          <p>
-            Developed a GUI-based JavaFX application to scrape and replicate website data.
-            Demonstrated strong problem-solving and understanding of networking.
+          <h3 className="project-title">JavaFX Web Scraper</h3>
+          <p className="text">
+            GUI-based JavaFX scraper to extract and replicate website data. Demonstrated strong
+            networking and JavaFX UI development skills.
           </p>
         </div>
 
         <div className="project-card">
-          <h3>Stock Market Analyzer</h3>
-          <p>
-            Java tool that fetched and visualized stock market trends using Yahoo Finance API.
-            Included basic analytics and plotting features.
+          <h3 className="project-title">Stock Market Analyzer</h3>
+          <p className="text">
+            Java application fetching live stock data using Yahoo Finance API with trend analysis
+            and chart visualization.
           </p>
         </div>
-      </div>
+      </section>
 
       {/* EDUCATION */}
-      <div className="card">
-        <h2 className="section-title">{`> Education`}</h2>
-
-        <ul className="edu-list">
-          <li><strong>Bachelor of Computer Science (Cybersecurity)</strong>, IILM University — *Expected 2026*</li>
+      <section className="card">
+        <h2 className="section-heading">Education</h2>
+        <ul className="list">
+          <li><strong>Bachelor of Computer Science (Cybersecurity)</strong>, IILM University — Expected 2026</li>
           <li><strong>Diploma in Computer Science</strong>, Mangalayatan University — 2020–2023</li>
           <li>Senior Secondary — Union Public School (2019–2020)</li>
           <li>Higher Secondary — Seemax International School (2017–2018)</li>
         </ul>
-      </div>
+      </section>
 
-      {/* CERTIFICATION */}
-      <div className="card">
-        <h2 className="section-title">{`> Certifications`}</h2>
-        <p>
-          <strong>Tata Cybersecurity Analyst Job Simulation (Forage, July 2025)</strong><br />
-          Completed IAM-based cybersecurity simulation including best practices, enterprise IAM architecture,
-          documentation, and report writing.
+      {/* CERTIFICATIONS */}
+      <section className="card">
+        <h2 className="section-heading">Certifications</h2>
+        <p className="text">
+          <strong>Tata Cybersecurity Analyst Job Simulation (Forage, July 2025):</strong>
+          Hands-on experience in IAM principles, cybersecurity best practices,
+          enterprise IAM architecture, and technical documentation.
         </p>
-      </div>
+      </section>
 
       {/* ACHIEVEMENTS */}
-      <div className="card">
-        <h2 className="section-title">{`> Extra_Curricular`}</h2>
-        <p>🏆 Runner-Up • Hero League Football Tournament — Goalkeeper</p>
-      </div>
-
-      {/* RUN SYSTEM DIAGNOSTIC */}
-      <div className="card action-card">
-        <button onClick={runScan} className="action-btn">
-          Run System Diagnostic
-        </button>
-        <p className="hint">Simulating real-time portfolio status...</p>
-      </div>
+      <section className="card">
+        <h2 className="section-heading">Achievements</h2>
+        <p className="text">🏆 Runner-Up – Hero League Football Tournament (Goalkeeper)</p>
+      </section>
 
       {/* CONTACT */}
-      <div className="card">
-        <h2 className="section-title">{`> Contact`}</h2>
-        <p>📧 Email: <span className="highlight">adityasasni@gmail.com</span></p>
-        <p>🔗 LinkedIn: <span className="highlight">linkedin.com/in/aditya-sharma</span></p>
-        <p>📞 Phone: <span className="highlight">+91 74177 19077</span></p>
-      </div>
+      <section className="card">
+        <h2 className="section-heading">Contact</h2>
+        <p className="text">Email: <strong>adityasasni@gmail.com</strong></p>
+        <p className="text">LinkedIn: <strong>linkedin.com/in/aditya-sharma</strong></p>
+        <p className="text">Phone: <strong>+91 74177 19077</strong></p>
+      </section>
 
       {/* FOOTER */}
-      <footer className="monitor-footer">
-        <p>© 2025 Aditya Sharma • Portfolio v1.0</p>
+      <footer className="footer">
+        <p>© 2025 Aditya Sharma — Portfolio</p>
       </footer>
     </div>
   );
-}
+};
 
 export default App;
