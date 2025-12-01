@@ -7,10 +7,13 @@
 
 /* CONTAINER */
 .container {
+  width: 100%;
   max-width: 900px;
-  margin: auto;
+  margin: 0 auto;             /* centers horizontally */
   padding: 2rem;
+  text-align: left;           /* optional: keeps text aligned nicely */
 }
+
 
 /* HEADER */
 .header {
