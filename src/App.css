@@ -1,80 +1,203 @@
-/* src/App.css */
+/* TERMINAL THEME ROOT */
 :root {
-  font-family: monospace, sans-serif; /* Use a geeky font */
-  background-color: #1a1a1a;
-  color: #00ff00; /* Classic green terminal text */
+  font-family: monospace, sans-serif;
+  background-color: #0d0d0d;
+  color: #00ff00;
 }
 
+/* MAIN LAYOUT */
 #root {
-  max-width: 1280px;
+  max-width: 1050px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
+/* CORE CONTAINER */
 .monitor-container {
   border: 2px solid #00ff00;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 255, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
 }
 
+/* HEADER */
 .monitor-header h1 {
-  font-size: 2.5em;
+  font-size: 2.6em;
   color: #00ff00;
-  text-shadow: 0 0 5px #00ff00;
+  text-shadow: 0 0 10px #00ff00;
 }
 
 .subtitle {
-  color: #aaa;
+  color: #8aff8a;
+  font-size: 0.95em;
+  margin-top: -10px;
 }
 
+/* GENERIC CARD */
 .card {
-  padding: 2em;
+  padding: 25px;
   border: 1px solid #00ff00;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.45);
+  margin-top: 25px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 20px rgba(0, 255, 0, 0.1);
+  transition: 0.3s ease;
 }
 
-.terminal-output {
-  text-align: left;
-  height: 150px;
-  overflow-y: auto;
-  font-size: 0.9em;
+/* CARD HOVER EFFECT */
+.card:hover {
+  box-shadow: 0 0 18px rgba(0, 255, 0, 0.2);
 }
 
-.log-entry {
-  margin: 0;
-  padding: 2px 0;
-  white-space: nowrap;
+/* SECTION TITLES */
+.section-title {
+  font-size: 1.5em;
+  color: #00ff00;
+  margin-bottom: 15px;
+  text-shadow: 0 0 8px #00ff00;
 }
 
-.action-btn {
-  background-color: #00ff00;
-  color: #1a1a1a;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-family: monospace;
-  font-weight: bold;
-}
-
-.action-btn:hover {
-  background-color: #00dd00;
-}
-
-.read-the-docs {
-  color: #888;
+/* INTRO */
+.intro h2 {
+  color: #00ff00;
+  font-size: 1.8em;
   margin-top: 10px;
 }
 
-.monitor-footer {
-  margin-top: 20px;
-  font-size: 0.8em;
-  color: #555;
+.intro-text {
+  color: #8aff8a;
+  margin-top: 10px;
+  font-size: 1.1em;
+  line-height: 1.4em;
 }
 
-/* Remove default styles for unused assets if they were in the original HTML */
-.logo, .logo.react, @keyframes logo-spin, @media (prefers-reduced-motion: no-preference) {
+/* HIGHLIGHTED TEXT */
+.highlight {
+  color: #00ff00;
+  font-weight: bold;
+  text-shadow: 0 0 6px #00ff00;
+}
+
+/* TERMINAL LOG COLORS */
+.green {
+  color: #00ff00;
+}
+
+.blue {
+  color: #00e0ff;
+}
+
+.yellow {
+  color: #ffee55;
+}
+
+/* PROJECT CARDS */
+.project-card {
+  border: 1px dashed #00ff00;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 12px;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.project-card h3 {
+  margin: 0;
+  color: #00ff00;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+/* SKILLS GRID */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-chip {
+  border: 1px solid #00ff00;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: rgba(0, 255, 0, 0.1);
+  color: #00ff00;
+  font-size: 0.9em;
+  transition: 0.2s ease;
+}
+
+.skill-chip:hover {
+  background: #00ff00;
+  color: #000;
+  cursor: pointer;
+}
+
+/* EDUCATION LIST */
+.edu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.edu-list li {
+  margin-bottom: 12px;
+  color: #8aff8a;
+}
+
+/* TERMINAL LOG AREA */
+.terminal-card {
+  text-align: left;
+  height: auto;
+  font-size: 0.95em;
+}
+
+.log {
+  margin: 3px 0;
+  white-space: nowrap;
+}
+
+/* BUTTON */
+.action-btn {
+  background-color: #00ff00;
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+.action-btn:hover {
+  background-color: #00cc00;
+  box-shadow: 0 0 12px rgba(0, 255, 0, 0.3);
+}
+
+/* FOOTER */
+.monitor-footer {
+  margin-top: 25px;
+  font-size: 0.85em;
+  color: #55ff55;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .monitor-container {
+    padding: 15px;
+  }
+
+  .monitor-header h1 {
+    font-size: 2em;
+  }
+
+  .intro h2 {
+    font-size: 1.5em;
+  }
+}
+
+/* UNUSED VITE DEFAULT STYLES REMOVED */
+.logo, .logo.react, @keyframes logo-spin, 
+@media (prefers-reduced-motion: no-preference) {
   display: none;
 }
