@@ -111,7 +111,7 @@ const App: React.FC = () => {
       <section className="card">
         <h2 className="section-heading">Contact</h2>
         <p className="text">Email: <strong><a href="mailto:adityasasni@gmail.com">adityasasni@gmail.com</a></strong></p>
-        <p className="text">LinkedIn: <strong><a href="https://linkedin.com/in/aditya-sharma-sasni" target="_blank" rel="noopener noreferrer">linkedin.com/in/aditya-sharma</a></strong></p>
+        <p className="text">LinkedIn: <strong><a href="https://linkedin.com/in/aditya-sharma-sasni" target="_blank" rel="noopener noreferrer">linkedin.com/in/aditya-sharma-sasni</a></strong></p>
         <p className="text">Phone: <strong><a href="tel:+917417719077">+91 74177 19077</a></strong></p>
       </section>
 
