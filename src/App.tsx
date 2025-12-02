@@ -110,9 +110,9 @@ const App: React.FC = () => {
       {/* CONTACT */}
       <section className="card">
         <h2 className="section-heading">Contact</h2>
-        <p className="text">Email: <strong>adityasasni@gmail.com</strong></p>
-        <p className="text">LinkedIn: <strong>linkedin.com/in/aditya-sharma</strong></p>
-        <p className="text">Phone: <strong>+91 74177 19077</strong></p>
+        <p className="text">Email: <strong><a href="mailto:adityasasni@gmail.com">adityasasni@gmail.com</a></strong></p>
+        <p className="text">LinkedIn: <strong><a href="https://linkedin.com/in/aditya-sharma" target="_blank" rel="noopener noreferrer">linkedin.com/in/aditya-sharma</a></strong></p>
+        <p className="text">Phone: <strong><a href="tel:+917417719077">+91 74177 19077</a></strong></p>
       </section>
 
       {/* FOOTER */}
